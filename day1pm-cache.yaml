@@ -108,9 +108,9 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   day1pm.tex:
-    timeStamp: 2018-02-07T08:08:48.529Z
+    timeStamp: 2018-02-07T08:37:49.121Z
     jobNames: []
-    hash: su1sUBg1AKQn6PkT7MOOousOKOcsvJr7UY6DplYAERY=
+    hash: cEcXrQADId6S5Bc7HtqYtkh0xymHt584Z6uFA9MwsQY=
     type: LaTeX
     subType: article
   'C:\Users\admin\.dicy.yaml':
@@ -5172,25 +5172,25 @@ files:
       calls: []
     type: ParsedLaTeXLog
   day1pm.aux:
-    timeStamp: 2018-02-07T08:08:57.545Z
+    timeStamp: 2018-02-07T08:38:01.720Z
     jobNames: []
     hash: vNELtJ3hjwch9Oi7CCrGr/QVJy7IIg5lQibXAk+NcrU=
     type: LaTeXAuxilary
   day1pm.fls:
-    timeStamp: 2018-02-07T08:09:05.440Z
+    timeStamp: 2018-02-07T08:38:03.592Z
     jobNames: []
     hash: sl8pEbAGPCkFi6jqnYKkh0IYrdVUewXR06CvcF7afEw=
     type: FileListing
   day1pm.log:
-    timeStamp: 2018-02-07T08:09:03.958Z
+    timeStamp: 2018-02-07T08:38:03.392Z
     jobNames: []
-    hash: 0F10f620Knt40V8b5V5Z4jYpMuKDczSUN1hT3FqWZic=
+    hash: nGdNjxKM6A2m18kuXOhxUmz0tduioY+MmQInoUUaGVI=
     type: LaTeXLog
     subType: LuaTeX
   day1pm.synctex.gz:
-    timeStamp: 2018-02-07T08:09:03.957Z
+    timeStamp: 2018-02-07T08:38:03.389Z
     jobNames: []
-    hash: HOL74eVTl2M5HBlpzI1osaOgPxCCxI+jWWQJiCzJT00=
+    hash: 24lEClohwzmwmfw9fuFT1JiIsayU0/zTVnR34h1mV0A=
     type: SyncTeX
   day1pm.aux-ParsedLaTeXAuxilary:
     timeStamp: 2018-02-07T08:00:58.441Z
@@ -5815,9 +5815,9 @@ files:
     timeStamp: 2018-02-07T01:27:38.286Z
     jobNames: []
   day1pm.pdf:
-    timeStamp: 2018-02-07T08:09:03.953Z
+    timeStamp: 2018-02-07T08:38:03.388Z
     jobNames: []
-    hash: sEgXx91Bub1W0F9Qe9uLLyh/dqHxPkPJu7wacnYebZM=
+    hash: jAoAX9j5Ow1AZAg00urhtJ3PNqfFvHStOhPVCC2Q7RA=
     type: PortableDocumentFormat
   'c:\texlive\2017\texmf-dist\fonts\type1\public\amsfonts\cm\cmex10.pfb':
     timeStamp: 2018-02-07T00:53:40.738Z
