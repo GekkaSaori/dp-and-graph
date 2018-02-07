@@ -8,15 +8,26 @@
 \subsection{数字三角形}
 “拉”法：$dp[i,j]=\max\{dp[i-1,j-1],dp[i-1,j]\}+value[i,j]$
 
-“推”法：$$dp[i,j]+value[i+1,j]\to dp[i+1,j]\\
-dp[i,j]+value[i+1,j+1]\to dp[i+1,j+1]$$
-
+“推”法：
+\begin{equation*}
+\begin{aligned}
+&dp[i,j]+value[i+1,j]&\to&dp[i+1,j]\\
+&dp[i,j]+value[i+1,j+1]&\to&dp[i+1,j+1]
+\end{aligned}
+\end{equation*}
 \subsubsection{DP与图论的关系}
 迷宫问题，求解S-T的最短路。
 
 考虑搜索的方案。
-
-TODO FIX CODE
+\begin{minted}{python}
+    global ans = infinity
+    procedure Search[pos, temp]:
+        if pos == T:
+            ans = max[ans, temp]
+        else:
+            for (pos, next_pos, cost) in graph:
+                Search[next_pos, temp + cost]
+\end{minted}
 
 搜索算法有什么特点？第一次到达某个点，就是最优的解。
 
@@ -65,6 +76,9 @@ function Search(i):
     ans = 1
     for j = 1 to n:
         if CanInlay(j,i):
+            ans = max(ans, Search(j) + 1)
+            Dp[i] = ans
+            return ans
 \end{minted}
 \subsubsection{计数问题}
 骨牌覆盖问题：有一个2行n列的长方形网格，要求用n个1*2的骨牌铺满，求覆盖方案。
@@ -91,27 +105,30 @@ $f(n)=f(0)f(n-1)+f(1)f(n-2)+\cdots+f(n-1)f(0)$
   \end{itemize}
 \end{enumerate}
 \subsubsection{凸多边形划分问题}
-解法1：考虑$v_1v_n$这条边所在的三角形的位置，则有：
-\begin{equation*}
-  f(n)=f(2)f(n-1)+f(3)f(n-2)+\cdots+f(n-1)f(2)
-\end{equation*}
-每次把多边形划分成两个凸多边形。
-解法2：考虑$v_1v_k$这条对角线，假设连了$v_1v_k$这条对角线，则会发现一边是$n-k$的多边形，另一侧是一个$n-k+2$的多边形。
-\begin{equation*}
-  f(3)f(n-1)+f(4)+f(n-2)+\cdots+f(n-1)f(3)
-\end{equation*}
-每一个点出发的对角线都有上述的效果，所以枚举每一个点出发的每一条对角线，共计有n个点：
-\begin{equation*}
-  n[f(3)f(n-1)+f(4)+f(n-2)+\cdots+f(n-1)f(3)]
-\end{equation*}
-每一条对角线的效果会被计算两次（明显地，枚举每一个点，$v_1v_k$这条对角线会在$v_1$这个点被枚举一次，在$v_k$这个点又被枚举一次）：
-\begin{equation*}
-  \begin{aligned}
-    f(n)&=n[f(3)f(n-1)+f(4)+f(n-2)+\cdots+f(n-1)f(3)]/[2(n-3)]\\
-    &=>f(n+1)=f(n)*(4n-6)/n
-  \end{aligned}
-\end{equation*}
-这是一种计数问题中非常常见的处理方法，我们发现每种情况被算了多次，那么就除以这种情况被算的次数即可（类似排列组合的公式的推导）。
+\begin{itemize}
+    \item{解法1：考虑$v_1v_n$这条边所在的三角形的位置，则有：
+    \begin{equation*}
+      f(n)=f(2)f(n-1)+f(3)f(n-2)+\cdots+f(n-1)f(2)
+    \end{equation*}
+    每次把多边形划分成两个凸多边形。}
+    \item{解法2：考虑$v_1v_k$这条对角线，假设连了$v_1v_k$这条对角线，则会发现一边是$n-k$的多边形，另一侧是一个$n-k+2$的多边形。
+    \begin{equation*}
+      f(3)f(n-1)+f(4)+f(n-2)+\cdots+f(n-1)f(3)
+    \end{equation*}
+    每一个点出发的对角线都有上述的效果，所以枚举每一个点出发的每一条对角线，共计有n个点：
+    \begin{equation*}
+      n[f(3)f(n-1)+f(4)+f(n-2)+\cdots+f(n-1)f(3)]
+    \end{equation*}
+    每一条对角线的效果会被计算两次（明显地，枚举每一个点，$v_1v_k$这条对角线会在$v_1$这个点被枚举一次，在$v_k$这个点又被枚举一次）：
+    \begin{equation*}
+      \begin{aligned}
+        f(n)&=n[f(3)f(n-1)+f(4)+f(n-2)+\cdots+f(n-1)f(3)]/[2(n-3)]\\
+        &=>f(n+1)=f(n)*(4n-6)/n
+      \end{aligned}
+    \end{equation*}
+    }
+\end{itemize}
+其中解法2是一种计数问题中非常常见的处理方法，我们发现每种情况被算了多次，那么就除以这种情况被算的次数即可（类似排列组合的公式的推导）。
 
 以上技巧称为``Double-counting''，以上递推公式就是Catelan数的定义。
 

@@ -108,20 +108,20 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   day1am.tex:
-    timeStamp: 2018-02-07T08:52:18.134Z
+    timeStamp: 2018-02-07T09:59:18.360Z
     jobNames: []
-    hash: IpKHNu0eEVa/CA2xGxs45oqp9rb2Ej4/sRFEHR3WYuM=
+    hash: UETSogFc1BSvxbv2iHl6OKtFdU4VS0+iCZDBOz8Tgso=
     type: LaTeX
     subType: article
   'C:\Users\admin\.dicy.yaml':
-    timeStamp: 2018-02-07T06:50:05.548Z
+    timeStamp: 2018-02-07T10:00:22.732Z
     jobNames: []
     type: YAML
   x.y-Nil:
     jobNames: []
     type: Nil
   day1am.fls-ParsedFileListing:
-    timeStamp: 2018-02-07T08:51:20.826Z
+    timeStamp: 2018-02-07T09:48:03.535Z
     jobNames: []
     value:
       messages: []
@@ -193,6 +193,10 @@ files:
         - 'C:\texlive\2017\texmf-var\luatex-cache\generic\fonts\otl\simsun-1.luc'
         - >-
           _minted-day1am\23A9ACA35E544D880E1607C508A710673FC3727115C604CA9F599C5DC3651553.pygtex
+        - >-
+          _minted-day1am\363C9E41001390742A02650BA8ABDAF93FC3727115C604CA9F599C5DC3651553.pygtex
+        - >-
+          _minted-day1am\E84199427E2F19849B09108A7E62680D3FC3727115C604CA9F599C5DC3651553.pygtex
         - >-
           _minted-day1am\F5F35004C9C549658ACBE5CC30491F203FC3727115C604CA9F599C5DC3651553.pygtex
         - _minted-day1am\default-pyg-prefix.pygstyle
@@ -359,7 +363,7 @@ files:
       calls: []
     type: ParsedFileListing
   day1am.log-ParsedLaTeXLog:
-    timeStamp: 2018-02-07T08:52:28.503Z
+    timeStamp: 2018-02-07T09:48:03.645Z
     jobNames: []
     value:
       messages:
@@ -5165,45 +5169,6 @@ files:
             range:
               start: 1535
               end: 1536
-        - severity: error
-          name: LuaTeX
-          text: Display math should end with $$
-          log:
-            file: day1am.log
-            range:
-              start: 1538
-              end: 1538
-          source:
-            file: day1am.tex
-            range:
-              start: 12
-              end: 12
-        - severity: error
-          name: LuaTeX
-          text: Missing $ inserted
-          log:
-            file: day1am.log
-            range:
-              start: 1546
-              end: 1546
-          source:
-            file: day1am.tex
-            range:
-              start: 13
-              end: 13
-        - severity: error
-          name: LuaTeX
-          text: Display math should end with $$
-          log:
-            file: day1am.log
-            range:
-              start: 1554
-              end: 1554
-          source:
-            file: day1am.tex
-            range:
-              start: 13
-              end: 13
         - severity: info
           name: LuaTeX
           category: LaTeX Font
@@ -5212,15 +5177,15 @@ files:
             shape `TU/lmtt/b/n' tried instead.
           source:
             file: >-
-              _minted-day1am\23A9ACA35E544D880E1607C508A710673FC3727115C604CA9F599C5DC3651553.pygtex
+              _minted-day1am\363C9E41001390742A02650BA8ABDAF93FC3727115C604CA9F599C5DC3651553.pygtex
             range:
               start: 2
               end: 2
           log:
             file: day1am.log
             range:
-              start: 1568
-              end: 1569
+              start: 1544
+              end: 1545
         - severity: warning
           name: LuaTeX
           category: LaTeX Font
@@ -5229,15 +5194,15 @@ files:
             `LTJY3/FangSong(0)/m/n' instead.
           source:
             file: >-
-              _minted-day1am\23A9ACA35E544D880E1607C508A710673FC3727115C604CA9F599C5DC3651553.pygtex
+              _minted-day1am\363C9E41001390742A02650BA8ABDAF93FC3727115C604CA9F599C5DC3651553.pygtex
             range:
               start: 2
               end: 2
           log:
             file: day1am.log
             range:
-              start: 1574
-              end: 1575
+              start: 1550
+              end: 1551
         - severity: warning
           name: LuaTeX
           category: LaTeX Font
@@ -5247,8 +5212,8 @@ files:
           log:
             file: day1am.log
             range:
-              start: 1585
-              end: 1586
+              start: 1565
+              end: 1566
         - severity: warning
           name: LuaTeX
           category: LaTeX Font
@@ -5258,33 +5223,33 @@ files:
           log:
             file: day1am.log
             range:
-              start: 1589
-              end: 1589
+              start: 1569
+              end: 1569
       inputs: []
       outputs:
         - day1am.pdf
       calls: []
     type: ParsedLaTeXLog
   day1am.aux:
-    timeStamp: 2018-02-07T08:52:26.475Z
+    timeStamp: 2018-02-07T09:59:24.063Z
     jobNames: []
-    hash: BATttgAvgWg2fI/yez9GtEb+wkfb34kXvf9hwTDCLUg=
+    hash: UFsJRAycG8wfbNN58OjsHX9OQtcB0d8yHwAHekRAqr0=
     type: LaTeXAuxilary
   day1am.fls:
-    timeStamp: 2018-02-07T08:52:27.735Z
+    timeStamp: 2018-02-07T09:54:33.470Z
     jobNames: []
-    hash: uiwPyw23Gc+OZ1d/AcqH7dDqZ4rjR13zp55ySsO52Ao=
+    hash: 9ifHazWZ5KBmDPaFHz4ctAqZ6M33TqgFh5pcGJCz3IE=
     type: FileListing
   day1am.log:
-    timeStamp: 2018-02-07T08:52:27.574Z
+    timeStamp: 2018-02-07T09:59:24.536Z
     jobNames: []
-    hash: DTCTPekCvq7QINwYcX7c3tnQfA5IhaXU1YD1uMIWW10=
+    hash: Kr/QQCEHBsm8KMNaGRSRh1fKuaOM3uOUwXADAk88Wco=
     type: LaTeXLog
     subType: LuaTeX
   day1am.synctex.gz:
-    timeStamp: 2018-02-07T08:52:27.572Z
+    timeStamp: 2018-02-07T09:59:24.535Z
     jobNames: []
-    hash: ia2tN2XvoRrDz1eMzVD2xKQm0ARE1L5ngwjh7hh4ffw=
+    hash: +GKX7lMmKA5b9UeUE0dMtH8tBEx42OBDJBy0ArMReCY=
     type: SyncTeX
   day1am.aux-ParsedLaTeXAuxilary:
     timeStamp: 2018-02-07T08:51:20.808Z
@@ -5416,10 +5381,6 @@ files:
     timeStamp: 2018-02-07T02:02:09.177Z
     jobNames: []
     hash: LitiDma0eKqVegNZj6JzHjdVI7OB8Kvemur5XlcjXxw=
-  _minted-day1am\F5F35004C9C549658ACBE5CC30491F203FC3727115C604CA9F599C5DC3651553.pygtex:
-    timeStamp: 2018-02-07T02:20:47.004Z
-    jobNames: []
-    hash: +UY7Fq9oZtQEFlwC7J4+/ERzPSxyQLmvaLXYng2XBGs=
   _minted-day1am\default-pyg-prefix.pygstyle:
     timeStamp: 2018-02-07T02:02:08.685Z
     jobNames: []
@@ -5931,21 +5892,24 @@ files:
     timeStamp: 2018-02-07T01:27:38.286Z
     jobNames: []
   day1am.pdf:
-    timeStamp: 2018-02-07T08:52:26.796Z
+    timeStamp: 2018-02-07T09:59:24.535Z
     jobNames: []
-    hash: bt75Duxads1wj24tAwNsscvxJVdwHgC+yVvt5x2Adfc=
+    hash: U7mM704DWBMyjpogn1UWQbAzAJN9Mi9aCbZ3pQrgVgs=
     type: PortableDocumentFormat
+  _minted-day1am\363C9E41001390742A02650BA8ABDAF93FC3727115C604CA9F599C5DC3651553.pygtex:
+    timeStamp: 2018-02-07T09:48:02.120Z
+    jobNames: []
+    hash: 6YvmkhCcatwX4UHsUYHGoBvgaF3MpNBw0NBeaQQO83I=
+  _minted-day1am\E84199427E2F19849B09108A7E62680D3FC3727115C604CA9F599C5DC3651553.pygtex:
+    timeStamp: 2018-02-07T09:48:02.679Z
+    jobNames: []
+    hash: 8XxyvoRrxY51JNKsmVli4UEK/GjkipllYDxCcyU7zvw=
 rules:
   - name: ApplyOptions
     command: load
     phase: initialize
     parameters: []
-    inputs:
-      - dicy.yaml-ParsedYAML
-      - day1am.yaml-ParsedYAML
-      - day1am.tex-ParsedLaTeXMagic
-      - dicy-instance.yaml-ParsedYAML
-      - 'C:\Users\admin\.dicy.yaml-ParsedYAML'
+    inputs: []
     outputs: []
   - name: LoadAndValidateCache
     command: load
@@ -6067,8 +6031,6 @@ rules:
       - 'C:\texlive\2017\texmf-var\luatex-cache\generic\fonts\otl\simsun-1.luc'
       - >-
         _minted-day1am\23A9ACA35E544D880E1607C508A710673FC3727115C604CA9F599C5DC3651553.pygtex
-      - >-
-        _minted-day1am\F5F35004C9C549658ACBE5CC30491F203FC3727115C604CA9F599C5DC3651553.pygtex
       - _minted-day1am\default-pyg-prefix.pygstyle
       - _minted-day1am\default.pygstyle
       - 'c:\texlive\2017\texmf-dist\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm'
@@ -6219,6 +6181,10 @@ rules:
       - 'c:\texlive\2017\texmf-dist\tex\xelatex\xecjk\xunicode-extra.def'
       - 'c:\texlive\2017\texmf-dist\tex\xelatex\xunicode\xunicode.sty'
       - 'c:\texlive\2017\texmf-var\web2c\luatex\lualatex.fmt'
+      - >-
+        _minted-day1am\363C9E41001390742A02650BA8ABDAF93FC3727115C604CA9F599C5DC3651553.pygtex
+      - >-
+        _minted-day1am\E84199427E2F19849B09108A7E62680D3FC3727115C604CA9F599C5DC3651553.pygtex
     outputs:
       - day1am.aux
       - day1am.fls
@@ -6285,6 +6251,12 @@ rules:
       - day1am.log-ParsedLaTeXLog
   - name: SaveCache
     command: save
+    phase: execute
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: Clean
+    command: clean
     phase: execute
     parameters: []
     inputs: []
