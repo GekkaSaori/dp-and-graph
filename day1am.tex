@@ -6,8 +6,11 @@
 \title{Note on Dynamic Programming}
 \section{Introduction}
 \subsection{数字三角形}
-...
-TODO FIX note
+“拉”法：$dp[i,j]=\max\{dp[i-1,j-1],dp[i-1,j]\}+value[i,j]$
+
+“推”法：$$dp[i,j]+value[i+1,j]\to dp[i+1,j]\\
+dp[i,j]+value[i+1,j+1]\to dp[i+1,j+1]$$
+
 \subsubsection{DP与图论的关系}
 迷宫问题，求解S-T的最短路。
 
@@ -80,10 +83,10 @@ $f(n)=f(0)f(n-1)+f(1)f(n-2)+\cdots+f(n-1)f(0)$
   \begin{itemize}
     \item{考虑最早枚举的纵向骨牌出现的位置}
     \item{假设第i个位置是第一个纵向骨牌，他的左边全部都是横向骨牌}
-    \item{分两种情况讨论:}
+    \item{分两种情况讨论：}
     \begin{itemize}
-      \item{偶数：$f(n)=f(n-1)+f(n-3)+f(n-5)+\cdots+1$}
-      \item{奇数：$f(n)=f(n-2)+f(n-4)+f(n-6)+\cdots+f(0)$}
+      \item{偶数：$f(n)=f(n-1)+f(n-3)+f(n-5)+\cdots+f(1)$}
+      \item{奇数：$f(n)=f(n-1)+f(n-3)+f(n-5)+\cdots+f(0)$}
     \end{itemize}
   \end{itemize}
 \end{enumerate}
