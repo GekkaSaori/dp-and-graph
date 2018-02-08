@@ -108,9 +108,9 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   day2pm.tex:
-    timeStamp: 2018-02-08T08:29:26.082Z
+    timeStamp: 2018-02-08T09:03:02.216Z
     jobNames: []
-    hash: 8YwvDgMV7FozAYqms5wwivpfpV5tAkHZLAS3dVLJxxE=
+    hash: PUcWnq9wTYdwPWhJGdkRmLMeH4uBkkVQzCoqUFjf7Nk=
     type: LaTeX
     subType: article
   'C:\Users\admin\.dicy.yaml':
@@ -121,9 +121,9 @@ files:
     jobNames: []
     type: Nil
   day2pm.log:
-    timeStamp: 2018-02-08T08:29:34.981Z
+    timeStamp: 2018-02-08T09:03:14.486Z
     jobNames: []
-    hash: dLpWnsZQLf7QuSMCsU34OtOAkGa/DxuV5ea7dCIJ2i0=
+    hash: EgMpQNtq/0XWUv6SHk45dIE4H4iPNSYfbjaM+OsDmOc=
     type: LaTeXLog
     subType: LuaTeX
   day2pm.fls-ParsedFileListing:
@@ -373,7 +373,7 @@ files:
       calls: []
     type: ParsedFileListing
   day2pm.log-ParsedLaTeXLog:
-    timeStamp: 2018-02-08T07:48:59.856Z
+    timeStamp: 2018-02-08T08:43:28.645Z
     jobNames: []
     value:
       messages:
@@ -5233,24 +5233,24 @@ files:
       calls: []
     type: ParsedLaTeXLog
   day2pm.pdf:
-    timeStamp: 2018-02-08T08:29:34.980Z
+    timeStamp: 2018-02-08T09:03:14.484Z
     jobNames: []
-    hash: JIGOL+qzs61vpBJixLRVaf668qbitnu5u3N6rILTdUU=
+    hash: b+1CsyifamvD9sznS1gBp7VVYWWHvNVq4C9aiurlvuM=
     type: PortableDocumentFormat
   day2pm.aux:
-    timeStamp: 2018-02-08T08:29:34.717Z
+    timeStamp: 2018-02-08T09:03:11.614Z
     jobNames: []
     hash: oPqsHrA6rNTD62jLHWBDNlTkguND1yUN4eEq20ZsY5w=
     type: LaTeXAuxilary
   day2pm.fls:
-    timeStamp: 2018-02-08T08:29:35.191Z
+    timeStamp: 2018-02-08T09:03:14.631Z
     jobNames: []
     hash: ueqyP+0CfwfLvnsrfWJGDthMJU2BM6d4eYb9WQfoVj4=
     type: FileListing
   day2pm.synctex.gz:
-    timeStamp: 2018-02-08T08:29:34.980Z
+    timeStamp: 2018-02-08T09:03:14.485Z
     jobNames: []
-    hash: eyZjaLUENehZE/dL/uDRDkRDyJSfyzDWts9LTx1WKz8=
+    hash: SCLfAWKBPCLxWvJTGJgHQ3BpgINZmsOzc6tg9I9cfXE=
     type: SyncTeX
   day2pm.aux-ParsedLaTeXAuxilary:
     timeStamp: 2018-02-08T07:48:41.551Z
