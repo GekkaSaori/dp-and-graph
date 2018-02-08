@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{global} \PYG{n}{ans} \PYG{o}{=} \PYG{n}{infinity}
+\PYG{n}{procedure} \PYG{n}{Search}\PYG{p}{(}\PYG{n}{pos}\PYG{p}{,} \PYG{n}{temp}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n}{pos} \PYG{o}{==} \PYG{n}{T}\PYG{p}{:}
+        \PYG{n}{ans} \PYG{o}{=} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{ans}\PYG{p}{,} \PYG{n}{temp}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{k}{for}\PYG{p}{(}\PYG{n}{pos}\PYG{p}{,} \PYG{n}{next\PYGZus{}pos}\PYG{p}{,} \PYG{n}{cost}\PYG{p}{)} \PYG{o+ow}{in} \PYG{n}{graph}\PYG{p}{:}
+            \PYG{n}{Search}\PYG{p}{(}\PYG{n}{next\PYGZus{}pos}\PYG{p}{,} \PYG{n}{temp} \PYG{o}{+} \PYG{n}{cost}\PYG{p}{)}
+\end{Verbatim}
