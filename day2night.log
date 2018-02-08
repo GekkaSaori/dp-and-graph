@@ -1,8 +1,8 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2018.2.7)  8 FEB 2018 19:05
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2018.2.7)  8 FEB 2018 19:01
  system commands enabled.
  file:line:error style messages enabled.
-**day2pm.tex
-(d:/miku/day2pm.tex
+**day2night.tex
+(d:/miku/day2night.tex
 LaTeX2e <2017-04-15>
 Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
 Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
@@ -35,7 +35,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.265 seconds
+luaotfload | main : initialization completed in 0.257 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (c:/texlive/2017/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -1411,8 +1411,8 @@ LaTeX Font Info:    Overwriting symbol font `CJKmath' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `CJKmath' in version `bold'
 (Font)                  LTJY3/SimSun(0)/m/n --> LTJY3/SimSun(0)/bx/n on input li
 ne 7.
-(d:/miku/day2pm.aux)
-\openout1 = day2pm.aux
+(d:/miku/day2night.aux)
+\openout1 = day2night.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -1531,55 +1531,56 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 regular.luc)(load cache: C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lm
 roman17-regular.luc)(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fo
 nts/otl/lmroman12-bold.luc)(load cache: C:/Users/admin/.texlive2017/texmf-var/lu
-atexja/extra_lmroman12-bold.luc)(load luc: C:/texlive/2017/texmf-var/luatex-cach
-e/generic/fonts/otl/lmroman12-regular.luc)(load cache: C:/Users/admin/.texlive20
-17/texmf-var/luatexja/extra_lmroman12-regular.luc)(load luc: C:/texlive/2017/tex
-mf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc)(load cache: C:/Users
-/admin/.texlive2017/texmf-var/luatexja/extra_lmroman7-regular.luc)(load luc: C:/
-texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc)(load
- cache: C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman5-regular.lu
-c)
-LaTeX Font Info:    Try loading font information for U+msa on input line 18.
-(c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 18.
-(c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+atexja/extra_lmroman12-bold.luc)
+\openout3 = day2night.pyg
+ (d:/miku/_minted-day2night/default-pyg-prefix.
+pygstyle) (d:/miku/_minted-day2night/default.pygstyle)
+(d:/miku/_minted-day2night/392DA0644ECEC5F87CC4664FB0DBD8E0E45A5C058BDD7F3EF9CE
+33D500CB8FC5.pygtex(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fon
+ts/otl/lmmono10-italic.luc)(load cache: C:/Users/admin/.texlive2017/texmf-var/lu
+atexja/extra_lmmono10-italic.luc)
 
-{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}](load luc: C:/tex
-live/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-bold.luc)(load cache
-: C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman7-bold.luc)(load l
-uc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-bold.luc)(
-load cache: C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman5-bold.l
-uc) [2] [3] (d:/miku/day2pm.aux))
+LaTeX Font Warning: Font shape `LTJY3/FangSong(0)/m/it' undefined
+(Font)              using `LTJY3/FangSong(0)/m/n' instead on input line 2.
+
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.53937> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 7.
+(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmmonolt10-b
+old.luc)(load cache: C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmmono
+lt10-bold.luc)
+
+LaTeX Font Warning: Font shape `LTJY3/FangSong(0)/bx/n' undefined
+(Font)              using `LTJY3/FangSong(0)/m/n' instead on input line 7.
+
+[1
+
+{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) [2] (d:/miku/d
+ay2night.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+)
 
 Here is how much of LuaTeX's memory you used:
- 23157 strings out of 494481
+ 23341 strings out of 494481
  125171,662416 words of node,token memory allocated
- 2650 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 7 kern, 1 penalty, 687 attribute, 188 glue_
-spec, 40 attribute_list, 1 write, 10 user_defined nodes
-   avail lists: 1:2,2:31969,3:182,4:146,5:90,6:1401,7:1458,8:794,9:382,10:12,11:
-6
- 26599 multiletter control sequences out of 65536+600000
- 65 fonts using 54333347 bytes
- 55i,9n,81p,1032b,264s stack positions out of 5000i,500n,10000p,200000b,100000s
-<c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texl
-ive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/Windows/f
-onts/simsun.ttc><c:/Windows/fonts/simhei.ttf><c:/texlive/2017/texmf-dist/fonts/o
-pentype/public/lm/lmroman12-bold.otf><c:/texlive/2017/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-7.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2017/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on day2pm.pdf (3 pages, 119372 bytes).
+ 3392 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 33 kern, 972 attribute, 191 glue_spec, 55 a
+ttribute_list, 1 write, 10 user_defined nodes
+   avail lists: 1:3,2:22389,3:75,4:601,5:92,6:1126,7:344,8:30,9:192,11:6
+ 26777 multiletter control sequences out of 65536+600000
+ 35 fonts using 30614879 bytes
+ 55i,5n,81p,1035b,420s stack positions out of 5000i,500n,10000p,200000b,100000s
+<c:/Windows/fonts/simfang.ttf><c:/texlive/2017/texmf-dist/fonts/opentype/public/
+lm/lmmono10-regular.otf><c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmm
+onolt10-bold.otf><c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmmono10-i
+talic.otf><c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-regular
+.otf><c:/Windows/fonts/simsun.ttc><c:/texlive/2017/texmf-dist/fonts/opentype/pub
+lic/lm/lmroman12-bold.otf>
+Output written on day2night.pdf (2 pages, 30689 bytes).
 
-PDF statistics: 77 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+PDF statistics: 60 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
