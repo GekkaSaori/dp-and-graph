@@ -12,8 +12,47 @@
     dp[i,j]=\min\{dp[i,k]+dp[k+1,j]+r[i]\times c[j]\times c[k].\}
 \end{equation*}
 注意转移时不能按照正常的顺序转移，枚举的应该是区间长度，然后再转移。或者可以使用DFS的方式进行转移。
+\begin{minted}{C++}
+#include <cstdlib>
+#include <cstring>
+#include <cstdio>
+#include <cmath>
+#include <climits>
 
-可以使用记忆化搜索的方式进行优化。可以参照第一节记忆化搜索的写法。
+int n;
+int r[1005], c[1005];
+int dp_[1005][1005];
+
+void update(int &a, int b) {
+    if (a > b) a = b;
+}
+
+int dp(int i, int j) {
+    if (i == j) {
+        return 0;
+    }
+    if (dp_[i][j] != -1) {
+        return dp_[i][j];
+    }
+
+    int temp = INT_MAX;
+    for (int k = i; k <= j-1; ++k) {
+        update(temp, dp(i, k) + dp(k+1, j) + r[i] * c[j] * c[k]);
+    }
+    return dp_[i][j] = temp;
+}
+
+int main(void) {
+    memset(dp_, unsigned char(255), sizeof(dp_));
+    scanf("%d", &n);
+    for (int i = 0; i < n; ++i) {
+        scanf("%d%d", r+i, c+i);
+    }
+    printf("%d\n", dp(1, n));
+
+    return 0;
+}
+\end{minted}
 
 可以很容易的发现，在递归的顺序或枚举的拓扑序不是十分明显时，使用DFS加上记忆化搜索可以使代码清晰明了。
 
