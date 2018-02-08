@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{minted}
+\begin{document}
+\section{最长公共子序列}
+令dp[i][j]表示以第一个串的第i位与第二个串的第j位结尾的最长公共子序列长度。
+
+状态的转移有三种：
+\begin{equation*}
+    dp[i][j]=\max
+    \begin{cases}
+        dp[i-1,j]\\
+        dp[i,j-1]\\
+        dp[i-1,j-1]+1,a[i]=b[j].
+    \end{cases}
+\end{equation*}
+\end{document}
