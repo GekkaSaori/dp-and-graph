@@ -12,11 +12,11 @@ struct person_t
 	float p_;
 	person_t(float pp=0):p_(pp)
 	{
-		
+
 	}
-	float p (void) 
+	float p (void)
 	{
-		return p_; 
+		return p_;
 	};
 	float q(void)
 	{
@@ -42,8 +42,8 @@ int main(void)
 	scanf("%d",&n);
 	for(int i=1;i<=n;++i) scanf("%lf",&a[i].p_);
 	if(n==3)
-	{ 
-	    //something 只看第一个人向左边传还是右边传	
+	{
+	    //something 只看第一个人向左边传还是右边传
 	}
 	b[2]=a[2];
 	for(int i=3;i<=n;++i) b[i]=merge_l(b[i-1],a[i]);
@@ -54,7 +54,7 @@ int main(void)
 	for(int i=3;i<=n-1;++i)
 	{
 		if(i+2<=n) p =merge_r(c[i+2],p);
-		if(i-2>=2) p =merge_l(p,b[i-2]); 
+		if(i-2>=2) p =merge_l(p,b[i-2]);
 		float ans=0;
 		ans+=p.p()*a[i+1].q(),p.q()/(1-p.q()*a[i+1].q());
 		ans+=p.q()*a[i-1].p(),p.q()/(1-p.q()*a[i-1].p());
