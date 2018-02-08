@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{minted}
+\newcommand{\romannum}[1]{\uppercase\expandafter{\romannumeral#1}}
 \begin{document}
 \section{Classical Problems}
 \subsection{矩阵乘法}
@@ -50,16 +51,25 @@ dp[i,j]表示以i,j两个顶点构成的三角形的最大权值，则有：
     \end{cases}
 \end{equation*}
 \subsection{括号序列}
-令$dp[i,j)$表示区间$[i,j)$范围内最少需要补多少个括号。
+令$dp[i,j]$表示区间$[i,j)$范围内最少需要补多少个括号。
 \begin{equation*}
     dp[i,j]=
     \begin{cases}
         0&,i=j,\\
         1&,i+1=j,\\
         dp[i+1,j-1]&,of\,(s)\,or\,[s],\\
-        dp[i,k]+dp[k,j]&,Otherwise.
+        dp[i,k]+dp[k,j]&,i\le k<j.
     \end{cases}
 \end{equation*}
-\subsection{区间染色\uppercase\expandafter{\romannumeral2}}
-与括号序列有些类似，不妨参照括号序列的状态转移。
+\subsection{区间染色\romannum{2}}
+与括号序列有些类似，不妨参照括号序列的状态转移。令dp[i,j]把区间$[i,j)$全部染色所需要的最小代价，则有：
+\begin{equation*}
+    dp[i,j]=
+    \begin{cases}
+        0&,i=j,\\
+        1&,i+1=j,\\
+        dp[i,k]+dp[k,j]&,\textbf{...TODO...}
+    \end{cases}
+\end{equation*}
+\subsection{传球问题\romannum{2}}
 \end{document}
