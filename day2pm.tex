@@ -103,11 +103,13 @@ dp[i,j]表示以i,j两个顶点构成的三角形的最大权值，则有：
 \subsection{区间染色\romannum{2}}
 与括号序列有些类似，不妨参照括号序列的状态转移。令dp[i,j]把区间$[i,j)$全部染色所需要的最小代价，则有：
 \begin{equation*}
-    dp[i,j]=
+    dp[i,j]=\max
     \begin{cases}
         0&,i=j,\\
         1&,i+1=j,\\
-        dp[i,k]+dp[k,j]&,\textbf{...TODO...}
+        1+dp[i+1,j-1],\\
+        dp[i+1,j],\\
+        dp[i,j-1].
     \end{cases}
 \end{equation*}
 \subsection{传球问题\romannum{2}}
