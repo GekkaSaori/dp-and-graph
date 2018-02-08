@@ -1,8 +1,8 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2018.2.7)  8 FEB 2018 11:21
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2018.2.7)  8 FEB 2018 15:19
  system commands enabled.
  file:line:error style messages enabled.
-**day2am.tex
-(d:/miku/day2am.tex
+**day2pm.tex
+(d:/miku/day2pm.tex
 LaTeX2e <2017-04-15>
 Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
 Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
@@ -35,7 +35,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.456 seconds
+luaotfload | main : initialization completed in 0.242 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (c:/texlive/2017/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -1411,8 +1411,8 @@ LaTeX Font Info:    Overwriting symbol font `CJKmath' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `CJKmath' in version `bold'
 (Font)                  LTJY3/SimSun(0)/m/n --> LTJY3/SimSun(0)/bx/n on input li
 ne 6.
-(d:/miku/day2am.aux)
-\openout1 = day2am.aux
+(d:/miku/day2pm.aux)
+\openout1 = day2pm.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
@@ -1539,42 +1539,41 @@ mf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc)(load cache: C:/Users
 texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc)(load
  cache: C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman5-regular.lu
 c)
-LaTeX Font Info:    Try loading font information for U+msa on input line 12.
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
 (c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 12.
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 (c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (d:/miku/da
-y2am.aux))
+y2pm.aux))
 
 Here is how much of LuaTeX's memory you used:
- 23148 strings out of 494481
- 125171,662416 words of node,token memory allocated
- 2420 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 7 kern, 1 penalty, 668 attribute, 150 glue_
-spec, 39 attribute_list, 1 write, 10 user_defined nodes
-   avail lists: 1:2,2:21008,3:139,4:125,5:66,6:1001,7:1019,8:380,9:298,10:4,11:6
- 26594 multiletter control sequences out of 65536+600000
- 61 fonts using 47750547 bytes
- 55i,7n,81p,1032b,264s stack positions out of 5000i,500n,10000p,200000b,100000s
-<c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texl
-ive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/Windows/f
-onts/simsun.ttc><c:/Windows/fonts/simhei.ttf><c:/texlive/2017/texmf-dist/fonts/o
-pentype/public/lm/lmroman12-bold.otf><c:/texlive/2017/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-7.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2017/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on day2am.pdf (2 pages, 95750 bytes).
+ 23144 strings out of 494481
+ 125171,794899 words of node,token memory allocated
+ 2307 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 7 kern, 630 attribute, 144 glue_spec, 37 at
+tribute_list, 1 write, 10 user_defined nodes
+   avail lists: 1:2,2:29963,3:185,4:147,5:81,6:1431,7:1382,8:838,9:338,10:4,11:6
+ 26592 multiletter control sequences out of 65536+600000
+ 59 fonts using 44459163 bytes
+ 55i,7n,81p,111234b,264s stack positions out of 5000i,500n,10000p,200000b,100000s
+<c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/W
+indows/fonts/simsun.ttc><c:/Windows/fonts/simhei.ttf><c:/texlive/2017/texmf-dist
+/fonts/opentype/public/lm/lmroman12-bold.otf><c:/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi7.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on day2pm.pdf (2 pages, 106530 bytes).
 
-PDF statistics: 74 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+PDF statistics: 67 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
