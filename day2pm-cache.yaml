@@ -108,9 +108,9 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   day2pm.tex:
-    timeStamp: 2018-02-08T07:59:42.355Z
+    timeStamp: 2018-02-08T08:29:26.082Z
     jobNames: []
-    hash: Bi3taXyxbghbcoWw/+FmSDmGvcb1+SkkrrcGGnkcxdQ=
+    hash: 8YwvDgMV7FozAYqms5wwivpfpV5tAkHZLAS3dVLJxxE=
     type: LaTeX
     subType: article
   'C:\Users\admin\.dicy.yaml':
@@ -121,9 +121,9 @@ files:
     jobNames: []
     type: Nil
   day2pm.log:
-    timeStamp: 2018-02-08T07:59:52.098Z
+    timeStamp: 2018-02-08T08:29:34.981Z
     jobNames: []
-    hash: YKYCqW0ZkIxErh10J/G2kO3hqMiINOdao4nfviBPvmQ=
+    hash: dLpWnsZQLf7QuSMCsU34OtOAkGa/DxuV5ea7dCIJ2i0=
     type: LaTeXLog
     subType: LuaTeX
   day2pm.fls-ParsedFileListing:
@@ -5233,24 +5233,24 @@ files:
       calls: []
     type: ParsedLaTeXLog
   day2pm.pdf:
-    timeStamp: 2018-02-08T07:59:52.096Z
+    timeStamp: 2018-02-08T08:29:34.980Z
     jobNames: []
-    hash: l0JJefUz/doYRTIqv10R+nQTT5e0CaPLgC4zLPZpGyw=
+    hash: JIGOL+qzs61vpBJixLRVaf668qbitnu5u3N6rILTdUU=
     type: PortableDocumentFormat
   day2pm.aux:
-    timeStamp: 2018-02-08T07:59:51.863Z
+    timeStamp: 2018-02-08T08:29:34.717Z
     jobNames: []
     hash: oPqsHrA6rNTD62jLHWBDNlTkguND1yUN4eEq20ZsY5w=
     type: LaTeXAuxilary
   day2pm.fls:
-    timeStamp: 2018-02-08T07:59:52.275Z
+    timeStamp: 2018-02-08T08:29:35.191Z
     jobNames: []
     hash: ueqyP+0CfwfLvnsrfWJGDthMJU2BM6d4eYb9WQfoVj4=
     type: FileListing
   day2pm.synctex.gz:
-    timeStamp: 2018-02-08T07:59:52.097Z
+    timeStamp: 2018-02-08T08:29:34.980Z
     jobNames: []
-    hash: ICy0TEJCT5FKEGSIxUP8foj478gixHtC2Uti5R43myo=
+    hash: eyZjaLUENehZE/dL/uDRDkRDyJSfyzDWts9LTx1WKz8=
     type: SyncTeX
   day2pm.aux-ParsedLaTeXAuxilary:
     timeStamp: 2018-02-08T07:48:41.551Z
