@@ -1,0 +1,84 @@
+\subsection{最长公共子序列}
+令dp[i][j]表示以第一个串的第i位与第二个串的第j位结尾的最长公共子序列长度。
+
+状态的转移有三种：
+\begin{equation*}
+    dp[i][j]=\max
+    \begin{cases}
+        dp[i-1,j]\\
+        dp[i,j-1]\\
+        dp[i-1,j-1]+1,a[i]=b[j].
+    \end{cases}
+\end{equation*}
+\subsection{最长公共上升子序列}
+\subsubsection{三维DP}
+令dp[i,j,k]表示以第一个串的第i位与第二个串的第j位结尾，最后一位是k的最长公共上升子序列的长度，则有状态转移方程：
+\begin{equation*}
+    dp[i,j,k]=\max
+    \begin{cases}
+        dp[i-1,j,k]\\
+        dp[i,j-1,k]\\
+        dp[i-1,j-1,k'], k<k'.
+    \end{cases}
+\end{equation*}
+
+\subsubsection{降维优化}
+dp[i,j]表示以a串的第i位结尾，b串的第i-j位结尾的LCS，且最后元素为b[j]，则有：
+\begin{equation*}
+    dp[i,j]=\max
+    \begin{cases}
+        dp[i-1,j]\\
+        dp[i-1,j'],&j'<j,\\
+        &b[j']<b[j],\\
+        &a[i]=b[j].
+    \end{cases}
+\end{equation*}
+
+\section{区间模型}
+\subsection{矩阵乘法}
+矩阵：一个$N\times M$的矩阵被定义为一个N行M列的数组，数组中的每个元素都是一个实数。一个向量可以表示为一个$M\times 1$的矩阵。
+
+应用：
+
+矩阵乘向量：
+\begin{equation*}
+    \begin{bmatrix}
+        a_{11}&a_{12}\\
+        a_{21}&a_{22}
+    \end{bmatrix}
+    \times
+    \begin{bmatrix}
+        x_{11}\\
+        x_{21}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        y_1\\
+        y_2
+    \end{bmatrix}
+\end{equation*}
+有一个任意的向量$x(x_0,y_0)$旋转\theta\textdegree，则有：
+\begin{equation*}
+    \begin{aligned}
+        x_1=x_0\cdot\cos\theta-y_0\cdot\sin\theta\\
+        y_1=x_0\cdot\sin\theta+y_0\cdot\cos\theta
+    \end{aligned}
+\end{equation*}
+
+矩阵乘法：
+定义矩阵乘法运算规则如下：
+\begin{equation*}
+    \begin{aligned}
+        C[i,j]&=\sum_{k=1}^m A_{ik}B_{kj}\\
+        &=A_{i1}B_{1j}+A_{i2}B_{2j}+\cdots +A_{im}B_{mj}
+    \end{aligned}
+\end{equation*}
+时间复杂度为$O(n\times m\times k)$.
+
+矩阵乘法与DP的关系：矩阵乘法优化递推转移。
+
+例题：斐波那契数列升级版
+
+题解：矩阵快速幂优化递推转移。
+
+（抱歉，Atom崩了，推导过程没写，具体过程可参照题解）
