@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2018.2.7)  8 FEB 2018 15:50
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2018.2.7)  8 FEB 2018 15:59
  system commands enabled.
  file:line:error style messages enabled.
 **day2pm.tex
@@ -35,7 +35,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.260 seconds
+luaotfload | main : initialization completed in 0.256 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (c:/texlive/2017/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -1548,16 +1548,12 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 18.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}](save: C:/texlive
-/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-bold.lua)(save: C:/texli
-ve/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-bold.luc)(save cache: 
-C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman7-bold.lua)(save cac
-he: C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman7-bold.luc)(save
-: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-bold.lua)(sa
-ve: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-bold.luc)(
-save cache: C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman5-bold.l
-ua)(save cache: C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman5-bo
-ld.luc) [2] (d:/miku/day2pm.aux))
+{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}](load luc: C:/tex
+live/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-bold.luc)(load cache
+: C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman7-bold.luc)(load l
+uc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-bold.luc)(
+load cache: C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman5-bold.l
+uc) [2] (d:/miku/day2pm.aux))
 
 Here is how much of LuaTeX's memory you used:
  23157 strings out of 494481

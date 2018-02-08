@@ -76,6 +76,45 @@ int main(void) {
 给定一个序列，找出最长不互斥子序列，即$b[i]\band b[i-1]\neq 0.$
 
 类似LIS的做法，维护一个g[]数组，使它表示满足不互斥性质的子序列的长度。
+\begin{minted}{C++}
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <cmath>
+
+int n, a[100007], dp[100007], g[32];
+int ans;
+
+void update(int &a, int b) {
+    if (a < b) a = b;
+}
+
+int main(void) {
+    scanf("%d", &n);
+    for (int i = 0; i < n; ++i) {
+        scanf("%d", a+i);
+    }
+    for (int i = 0; i < n; ++i) {
+        int temp = 0;
+        for (int k = 0; k < 31; ++k) {
+            if (a[i] & (1 << k)) {
+                update(temp, g[k]);
+            }
+        }
+        dp[i] = temp + 1;
+        for (int k = 0; k < 31; ++k) {
+            if (a[i] & (1 << k)) {
+                update(g[k], dp[i]);
+            }
+        }
+
+        update(ans, dp[i]);
+    }
+    printf("%d\n", ans);
+
+    return 0;
+}
+\end{minted}
 \subsection{回文串划分}
 给一个字符串，划分成最少个回文子串。长度不超过1000.
 
@@ -207,43 +246,4 @@ g数组的求法：对于数组元素$g[i][x]$，我们有以下状态转移方�
         &g[i][x]&=&g[i+1][x]&,第i+1个方格的颜色不是前面所包含的.
     \end{aligned}
 \end{equation*}
-\begin{minted}{C++}
-#include <cstdlib>
-#include <cstdio>
-#include <cstring>
-#include <cmath>
-
-int n, a[100007], dp[100007], g[32];
-int ans;
-
-void update(int &a, int b) {
-    if (a < b) a = b;
-}
-
-int main(void) {
-    scanf("%d", &n);
-    for (int i = 0; i < n; ++i) {
-        scanf("%d", a+i);
-    }
-    for (int i = 0; i < n; ++i) {
-        int temp = 0;
-        for (int k = 0; k < 31; ++k) {
-            if (a[i] & (1 << k)) {
-                update(temp, g[k]);
-            }
-        }
-        dp[i] = temp + 1;
-        for (int k = 0; k < 31; ++k) {
-            if (a[i] & (1 << k)) {
-                update(g[k], dp[i]);
-            }
-        }
-
-        update(ans, dp[i]);
-    }
-    printf("%d\n", ans);
-
-    return 0;
-}
-\end{minted}
 \end{document}

@@ -108,20 +108,20 @@ files:
         2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
     type: ParsedYAML
   day1pm.tex:
-    timeStamp: 2018-02-08T02:00:16.026Z
+    timeStamp: 2018-02-08T08:04:14.008Z
     jobNames: []
-    hash: P8Qi739lyhuoajKVOFbmyyAjgVjArd5G3fUyi71r9V8=
+    hash: PQpFDL97F+jGyV89/N3Itun+xla7Ku8Ha8zQrx0l+/E=
     type: LaTeX
     subType: article
   'C:\Users\admin\.dicy.yaml':
-    timeStamp: 2018-02-07T23:40:40.085Z
+    timeStamp: 2018-02-08T05:52:14.356Z
     jobNames: []
     type: YAML
   x.y-Nil:
     jobNames: []
     type: Nil
   day1pm.fls-ParsedFileListing:
-    timeStamp: 2018-02-08T02:03:08.647Z
+    timeStamp: 2018-02-08T08:04:17.000Z
     jobNames: []
     value:
       messages: []
@@ -195,12 +195,6 @@ files:
         - 'C:\texlive\2017\texmf-var\luatex-cache\generic\fonts\otl\simhei.luc'
         - 'C:\texlive\2017\texmf-var\luatex-cache\generic\fonts\otl\simkai.luc'
         - 'C:\texlive\2017\texmf-var\luatex-cache\generic\fonts\otl\simsun-1.luc'
-        - >-
-          _minted-day1pm\26DA6A5F424CA8373C4B525881843BB68AABB42853BA7EACECBDFF6F26B1EA00.pygtex
-        - >-
-          _minted-day1pm\4CA1A8DCDB8502C58EE81168F2002DCB8AABB42853BA7EACECBDFF6F26B1EA00.pygtex
-        - >-
-          _minted-day1pm\5D16A3AF7A2F177B46A092DAFCBA77DA8AABB42853BA7EACECBDFF6F26B1EA00.pygtex
         - >-
           _minted-day1pm\88968474AF77DCB8934C91CBEDB917848AABB42853BA7EACECBDFF6F26B1EA00.pygtex
         - >-
@@ -373,7 +367,7 @@ files:
       calls: []
     type: ParsedFileListing
   day1pm.log-ParsedLaTeXLog:
-    timeStamp: 2018-02-08T02:03:08.905Z
+    timeStamp: 2018-02-08T08:04:24.442Z
     jobNames: []
     value:
       messages:
@@ -5258,25 +5252,25 @@ files:
       calls: []
     type: ParsedLaTeXLog
   day1pm.aux:
-    timeStamp: 2018-02-08T02:00:29.111Z
+    timeStamp: 2018-02-08T08:04:23.789Z
     jobNames: []
-    hash: TRnoXpkkm+qFlp0PpBPitf1Vp/3ZKA2jYNzDGuZ1wrk=
+    hash: vTYSxMYultZmu3nZWjg8HuvVT0piRMabPxuqU/I620Y=
     type: LaTeXAuxilary
   day1pm.fls:
-    timeStamp: 2018-02-08T02:02:20.893Z
+    timeStamp: 2018-02-08T08:04:24.288Z
     jobNames: []
-    hash: clITsuFk3vWXfOyG6MN0Mr8DcHHQj8u0Cxc4PSDnZO8=
+    hash: EFQbH2HnsR6nB5Xqe8C7jW0IgjDwzvrGUNGfYzIrfns=
     type: FileListing
   day1pm.log:
-    timeStamp: 2018-02-08T02:01:47.604Z
+    timeStamp: 2018-02-08T08:04:24.131Z
     jobNames: []
-    hash: kiE6r506GPTqUXw0ewSSWg0Lq4NZJFV/wZdcCugcUhY=
+    hash: WchAcJTwSj42VcGDfqwmS1fI44RnWWFapwq0DeK0qAI=
     type: LaTeXLog
     subType: LuaTeX
   day1pm.synctex.gz:
-    timeStamp: 2018-02-08T02:01:45.275Z
+    timeStamp: 2018-02-08T08:04:24.129Z
     jobNames: []
-    hash: CqWIwjAyvJPuwYAt3cnMB5Gvfo3WTCoYnqGYfDEiNvg=
+    hash: AK9WCb9+yonHZLx5j5lecgHPf1siyWX4OqwUqkrJl5g=
     type: SyncTeX
   day1pm.aux-ParsedLaTeXAuxilary:
     timeStamp: 2018-02-08T01:56:17.657Z
@@ -5902,9 +5896,9 @@ files:
     timeStamp: 2018-02-07T01:27:38.286Z
     jobNames: []
   day1pm.pdf:
-    timeStamp: 2018-02-08T02:01:43.307Z
+    timeStamp: 2018-02-08T08:04:24.129Z
     jobNames: []
-    hash: seu9/9ZY+r2Ifnb5iCSnCcSYtt9U+cUkBmQ0a9U+2Rc=
+    hash: p+6CduyQ1Gg/8CqYk5rua7+DkAT6Di4nrxeRpgiafwg=
     type: PortableDocumentFormat
   'c:\texlive\2017\texmf-dist\fonts\type1\public\amsfonts\cm\cmex10.pfb':
     timeStamp: 2018-02-07T00:53:40.738Z
@@ -5918,18 +5912,6 @@ files:
   'C:\texlive\2017\texmf-var\luatex-cache\generic\fonts\otl\lmmonolt10-bold.luc':
     timeStamp: 2018-02-07T02:02:09.335Z
     jobNames: []
-  _minted-day1pm\26DA6A5F424CA8373C4B525881843BB68AABB42853BA7EACECBDFF6F26B1EA00.pygtex:
-    timeStamp: 2018-02-08T01:53:25.415Z
-    jobNames: []
-    hash: jIQtNk2DUl+X6A5i1naZgquH1LJ2WVeSgz6fVD6YRwU=
-  _minted-day1pm\4CA1A8DCDB8502C58EE81168F2002DCB8AABB42853BA7EACECBDFF6F26B1EA00.pygtex:
-    timeStamp: 2018-02-08T01:53:16.970Z
-    jobNames: []
-    hash: bQe8vckYF17Njg4wc2ln2/d+7+oDudGuMX9ZAyOPtmY=
-  _minted-day1pm\5D16A3AF7A2F177B46A092DAFCBA77DA8AABB42853BA7EACECBDFF6F26B1EA00.pygtex:
-    timeStamp: 2018-02-08T01:53:28.485Z
-    jobNames: []
-    hash: neDeYwxMsUxiM0CQj/de+f2p7RuuZMAiU0DfJCYr7rc=
   _minted-day1pm\default-pyg-prefix.pygstyle:
     timeStamp: 2018-02-08T01:53:16.348Z
     jobNames: []
@@ -5967,12 +5949,7 @@ rules:
     command: load
     phase: initialize
     parameters: []
-    inputs:
-      - dicy.yaml-ParsedYAML
-      - day1pm.yaml-ParsedYAML
-      - day1pm.tex-ParsedLaTeXMagic
-      - dicy-instance.yaml-ParsedYAML
-      - 'C:\Users\admin\.dicy.yaml-ParsedYAML'
+    inputs: []
     outputs: []
   - name: LoadAndValidateCache
     command: load
@@ -6242,12 +6219,6 @@ rules:
       - 'C:\Users\admin\.texlive2017\texmf-var\luatexja\extra_lmmonolt10-bold.luc'
       - >-
         C:\texlive\2017\texmf-var\luatex-cache\generic\fonts\otl\lmmonolt10-bold.luc
-      - >-
-        _minted-day1pm\26DA6A5F424CA8373C4B525881843BB68AABB42853BA7EACECBDFF6F26B1EA00.pygtex
-      - >-
-        _minted-day1pm\4CA1A8DCDB8502C58EE81168F2002DCB8AABB42853BA7EACECBDFF6F26B1EA00.pygtex
-      - >-
-        _minted-day1pm\5D16A3AF7A2F177B46A092DAFCBA77DA8AABB42853BA7EACECBDFF6F26B1EA00.pygtex
       - _minted-day1pm\default-pyg-prefix.pygstyle
       - _minted-day1pm\default.pygstyle
       - 'c:\texlive\2017\texmf-dist\fonts\opentype\public\lm\lmmono10-italic.otf'

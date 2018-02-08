@@ -288,9 +288,10 @@ INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
 OUTPUT day2pm.pdf
-INPUT c:/texlive/2017/texmf-dist/tex/luatex/luaotfload/luaotfload-glyphlist.lua
-INPUT c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman7-bold.otf
-INPUT c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman5-bold.otf
+INPUT C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-bold.luc
+INPUT C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman7-bold.luc
+INPUT C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-bold.luc
+INPUT C:/Users/admin/.texlive2017/texmf-var/luatexja/extra_lmroman5-bold.luc
 INPUT d:/miku/day2pm.aux
 INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
