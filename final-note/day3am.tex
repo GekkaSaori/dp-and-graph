@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{minted}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+\usepackage{graphicx}
+\newcommand{\romannum}[1]{\uppercase\expandafter{\romannumeral#1}}
+\DeclareMathOperator{\bor}{or}
+\setminted[C++]{autogobble,breaklines,fontsize=\footnotesize,mathescape}
+\begin{document}
+\title{Note on Dynamic Programming (\romannum{3})\\\large{Day 3 AM to Day 3 NIGHT---Advanced Models}}\date{}\author{Hatsune Miku}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{“第一”计数模型}
+假设进行一场OI考试，两个人拿了300分，他们都是第一名，则下一个人就是第三名。同时$a=b>c$与$b=a>c$是同一种方案。
+\subsection{赛马名次}
+两个人比赛的结果有三种：输、赢、平。求N个人比赛的结果。$N\le 1000.$
+
+\begin{equation*}
+    dp[i]=\sum_{j=1}^i C_i^j\times dp[i-j],dp[0]=1.
+\end{equation*}
+
+先考虑有多少个第一名，假设有$i$个人参加比赛，那么i个人参加比赛的不同方案数=i个人中有1个人作为第一名的方案数$\times$其他人接着排的方案数。
+
+预处理出一个杨辉三角（表示出$C_n^k$），递推关系式：
+\begin{equation*}
+    C_n^k=C_{n-1}^k+C_{n-1}^{k-1}.
+\end{equation*}
+时间复杂度$O(n^2)$.
+\subsection{排列问题}
+有两种骨牌A和B，有无限个。需要选出n个排成一行，但要求至少有三个A被摆放在一起。$N\le 100.$
+
+考虑枚举连续的三个A第一次出现的位置。设$f[i]$为长度为i的序列有多少个满足要求的摆放方案，则枚举三个A第一次出现的位置，设前面部分长度为$j-1$，则后面部分长度为$n-(j+2)$，前面后面都可以任意放置。后面一段摆放方案数有$2^{n-(j+2)}$种。对于前半部分，我们有$2^{j-1}-f[j-1]$种方案，总的来看，我们有$f[i]=\sum^j(2^{j-1}-f[j-1])(2^{n-(j+2)})$。有一个问题，显然我们有当前面最后一位出现的是A，然后就不符合我们枚举第一个出现的位置。所以我们强制第一位为B，则递推式修正为$f[i]=\sum^j(2^{j-2}-f[j-2])(2^{n-(j+2)})+2^{n-3}$.
+\section{树模型}
+树模型的基本定义：无向无环图、有$n-1$条边的图。
+
+基本性质：树上任意两点都是相互联通的，且只有一条唯一的路径。
+\subsection{直径}
+无根树与有根树。显然树上最远的两个节点一点是两个叶子节点。对于一个无根树，可以指定一个节点作为根节点将这棵无根树树变为有根树，即把这棵树“拎”起来的过程。求一张图上的最短路可以在现实物理世界中做，将所有的点按照图上的边权连上一条等长的线，然后将这张图拎起来，则所有垂着的边就是最短路上的边。
+
+可以使用标准的图论算法，使用一次DFS，记录DFS序。
+
+已知，树上的路径只有两种情况：
+\begin{enumerate}
+    \item{从某个点出发形成一条路径一直向下走}
+    \begin{itemize}
+        \item{定义f[i]表示从i这个点往下走最远到达的点是什么}
+        \item{枚举一个j点，j是i的儿子，则有$f[i]=\max\{f[j]\}+1$}.
+    \end{itemize}
+    \item{这条路径会在某一个点转弯}
+    \begin{itemize}
+        \item{类似上述的转移，算出每个点出发到达的最长链和次长链}
+    \end{itemize}
+\end{enumerate}
+代码：
+\begin{minted}{C++}
+# include <cstdio>
+# include <iostream>
+# include <cstring>
+# include <cmath>
+
+struct sol_t {
+    int a, b;
+    void update(int c) {
+        if(c > a) b = a, a = c;
+        else if(c > b) b = c;
+    }
+};
+
+struct edge_t {
+    int a, b;
+    edge_t *next;
+};
+
+int n;
+sol_t dp[100005];
+edge_t edges[100005 * 2], *first_edge[100005], *pedges = edges;
+
+void add_edge(int a, int b) {
+    edge_t *p = ++pedges;
+    p->a = a, p->b = b, p->next = first_edge[a], first_edge[a] = p;
+}
+
+void work(int x, int fa) {
+    for(edge_t *e = first_edge[x]; e; e = e->next) if(e->b != fa) {
+        int y = e->b;
+
+        work(y, x);
+        dp[x].update((dp[y].a + 1));
+    }
+}
+
+void update(int &a, int b) {
+    if(a < b) a = b;
+}
+
+int main(void) {
+    scanf("%d", &n);
+    for(int i = 0, a, b; i < n; i++) {
+        scanf("%d%d", &a, &b);
+        add_edge(a, b);
+        add_edge(b, a);
+    }
+    work(1, 0);
+    int ans = 0;
+    for (int i = 1; i <= n; i++)  update(ans, dp[i].a);
+    for (int i = 1; i <= n; i++)  update(ans, dp[i].a + dp[i].b);
+    printf("%d\n", ans);
+    return 0;
+}
+\end{minted}
+
+\subsection{重心}
+N个节点的树，询问树的重心。重心是指删除一个点后使联通块大小的最大值最小，$N\le 100000$。
+
+直接枚举这棵树的重心是什么。假设切掉了一个点，那么联通块分为两类，第一类为以它父亲节点为一个叶子结点的子树，另外一类为以这个节点为根节点的子树的大小。两种类型是互补的，可以知一求一。最后两者之间取一个min即可。
+\subsection{奖励}
+N个的关系图是棵树，树上的边代表了“上司——下属”关系。
+
+每个人要么受到来自上司奖励的1000元，要么给予自己一个下属奖励1000元。
+
+问所有人拿到奖励和的最大值，并输出方案。$N\le 5\times 10^5$.
+
+对于叶子结点，只能收钱，需要排除的是在中间节点的一个人不能既发钱又收钱。
+
+同时DP两个数组f[i]和g[i]，令f[i]表示i的子树已经处理完毕，且i这个人没有收到上司的奖励。g[i]表示i的子树已经处理完毕，且i这个人收到了上司的奖励。
+\begin{equation*}
+    状态转移方程：
+    \begin{cases}
+        \begin{aligned}
+            f[i]&=\max
+            \begin{cases}
+                \sum_jf[j],\\
+                \max g[j]+\sum_{k\in j}f[k],
+            \end{cases}
+            \\
+            g[i]&=\sum_jf[j].
+        \end{aligned}
+    \end{cases}
+\end{equation*}
+最后输出答案时，只需要再做一次DFS，记录一下每个点是从哪个点来的，递归处理不同的数组即可。
