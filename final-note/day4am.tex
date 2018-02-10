@@ -1,0 +1,115 @@
+\section{数位模型}
+\subsection{数位翻转}
+有给定$L\le R$，求区间$[L,R]$中，有多少个数翻转后仍然在$[L,R]$中。$L, R\le 2^{64}$。
+
+考虑到我们写数字的一般形式，是一位一位按照数位书写的。现在我们需要可以考虑按照数位进行DP。
+
+令$f[i]$表示已经考虑了这个数字的前i位，有多少种方案数。先不用管倒过来还在这个区间里这个限制条件，考虑如何转移。假设原来的数字是$l_1l_2l_3l_4$和$r_1r_2r_3r_4$，合并后需要满足前缀大于$l$，小于$r$.
+
+可以使用“推”的方法思考这道题目。因为只使用$f[i]$这一维无法记录前面的位数，如果存在一个前面的位数，使得当前这个数小于$r$，那么后面的数字怎么填就无关紧要了（显然）。所以除了$f[i]$这一个数组外，我们还需要知道这个数之前填的是什么。
+
+用$c_1$表示当前这一位与l的关系。同理用$c_2$表示当前这一位与$r$的关系。$c_1$与$c_2$有两种状态：
+\begin{equation*}
+    \begin{aligned}
+        c_1=
+        \begin{cases}
+            \verb+'='+,当前这一位等于l,\\
+            \verb+'>'+,当前这一位大于l.
+        \end{cases}
+        &
+        c_2=
+        \begin{cases}
+            \verb+'='+,当前这一位等于r,\\
+            \verb+'<'+,当前这一位小于r.
+        \end{cases}
+    \end{aligned}
+\end{equation*}
+
+接下来考虑如何使状态的转移符合第二个条件。考虑把一个数翻过来以后与l的最后若干位和r的最后若干位关系。再定义一个$c_3$和$c_4$表示。需要考虑三种情况，小于、等于和大于。
+
+以上代码默认了两个条件，两个数字位数相同，如果需要处理需要翻转的情况，可以在外面直接枚举答案的位数$n$，还有如何统计答案的问题，假设l的长度为$n_l$位，$r$的长度为$n_r$位，则可以直接暴力枚举$c_1$, $c_2$, $c_3$, $c_4$的符号即可。
+
+一般套路是令$f[i]$表示已经考虑了这个数字的前i位，有多少种方案数。然后考虑在L和R区间内数字的大小关系即可。
+
+另一个问题，求区间$[L,R]$内有多少个数不存在连续的两个相同的数码。
+\begin{minted}{C++}
+f(i, c1, c2, c3, c4)
+->f(i+1, d1, d2, d3, d4)
+
+int get_next_f(int c1, int k, int r) {
+    int d1;
+    if (c1 == '=') {
+        if (k == r) d1 = '=';
+        else if (k < r) d1 = '<';
+        else d1 = '>';
+    } else {
+        d1 = c1;
+    }
+    return d1;
+}
+
+int get_next_b(int c3, int k, int r) {
+    int d3;
+    if (c3 == '=') {
+        if (k == r) d3 = '=';
+        else if (k < r) d3 = '<';
+        else d3 = '>';
+    } else if (c3 == '>') {
+        if (k == r) d3 = '>';
+        else if (k < r) d3 = '<';
+        else d3 = '>';
+    } else {
+        if (k == r) d3 = '<';
+        else if (k < r) d3 = '<';
+        else d3 = '>';
+    }
+    return d3;
+}
+
+// for i, c1, c2, c3, c4
+{
+    for (int k = 0; k < 10; ++k) {
+        int d1 = get_next_f(c1, k, L[i+1]);
+        int d2 = get_next_f(c2, k, R[i+1]);
+        int d3 = get_next_b(c3, k, L[n-i]);
+        int d4 = get_next_b(c4, k, R[n-i]);
+        dp[i+1][d1][d2][d3][d4] += dp[i][c1][c2][c3][c4];
+    }
+}
+
+// for n
+{
+    // dp()
+    // for c1 c2 c3 c4 {
+    ans += dp[n][c1][c2][c3][c4];
+}
+}
+
+// T2
+
+// for i, j, c1, c2
+{
+    for (int k = 0; k < 10; ++k) {
+        if (j != k) {
+            int d1 = get_next_f(c1, k, L[i+1]);
+            int d2 = get_next_b(c2, k, R[i+1]);
+            dp[i+1][k][d1][d2] += dp[i][j][c1][c2];
+        }
+    }
+}
+
+// for n
+{
+    dp()
+    // for j, c1, c2 {
+    ans += dp[i][j][c1][c2];
+}
+}
+\end{minted}
+\subsection{翻转求和}
+R(x)为x数码倒过来得到的数，问有多少个x满足：$x+R(x)=N$，$N\le 10^{10000}.$
+
+跟上道差不多，不用枚举大于号小和等于号。
+\subsection{组合数计数(BZOJ4737)}
+Lucas定理。
+\end{document}
