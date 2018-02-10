@@ -1,0 +1,121 @@
+\subsubsection{矩阵乘法}
+明显地，给矩阵乘法加括号的方案数等于卡特兰数。
+
+另外，我们有以下性质：
+\begin{enumerate}
+    \item{每一次做矩阵乘法的时候，都是将一个序列内连续区间的矩阵相乘，然后再乘上另外一个区间中的矩阵的乘积，最后再将两个矩阵乘起来。}
+    \item{第一个区间中的矩阵乘积的行数等于第二个区间中矩阵乘积的列数。}
+\end{enumerate}
+
+定义$dp[i,j]$表示把$[i,j]$这个区间中的矩阵全部乘起来所需要花费的最小代价，则最终答案为$dp[1][n]$，在转移时，枚举一个$k$，表示最后一个乘上去的矩阵是$k$，则我们有以下状态转移方程：
+\begin{equation*}
+    dp[i,j]=\min\{dp[i,k]+dp[k+1,j]+r[i]\times c[j]\times c[k]\}.
+\end{equation*}
+注意转移时不能按照正常的顺序转移，枚举的应该是区间长度，然后再转移。或者可以使用DFS的方式进行转移。
+\begin{minted}{C++}
+#include <cstdlib>
+#include <cstring>
+#include <cstdio>
+#include <cmath>
+#include <climits>
+
+int n;
+int r[1005], c[1005];
+int dp_[1005][1005];
+
+void update(int &a, int b) {
+    if (a > b) a = b;
+}
+
+int dp(int i, int j) {
+    if (i == j) {
+        return 0;
+    }
+    if (dp_[i][j] != -1) {
+        return dp_[i][j];
+    }
+
+    int temp = INT_MAX;
+    for (int k = i; k <= j-1; ++k) {
+        update(temp, dp(i, k) + dp(k+1, j) + r[i] * c[j] * c[k]);
+    }
+    return dp_[i][j] = temp;
+}
+
+int main(void) {
+    memset(dp_, unsigned char(255), sizeof(dp_));
+    scanf("%d", &n);
+    for (int i = 0; i < n; ++i) {
+        scanf("%d%d", r+i, c+i);
+    }
+    printf("%d\n", dp(1, n));
+
+    return 0;
+}
+\end{minted}
+
+可以很容易的发现，在递归的顺序或枚举的拓扑序不是十分明显时，使用DFS加上记忆化搜索可以使代码清晰明了。
+
+时间复杂度$O(n^3)$.
+\subsubsection{最优三角剖分（UVa 1626）}
+
+把一个$n$个顶点的凸多边形剖分成三角形。每一个三角形有唯一的权值函数$w(i,j,k)$。求最优剖分方法，最大化权值和。$n$不超过100，假设函数$w$定义如下：
+\begin{equation*}
+    w(i,j,k)=e\cos C+i\sin S.
+\end{equation*}
+设有两个向量：
+\begin{equation*}
+    \begin{aligned}
+        \alpha&=(x_2-x_1,y_2-y_1)\\
+        \beta&=(x_3-x_1,y_3-y_1)\\
+        \frac{1}{2}(\alpha\times\beta)&=\frac{1}{2}|(\alpha_1\beta_1-\alpha_2\beta_1)|
+    \end{aligned}
+\end{equation*}
+$\cdots\cdots（其余内容被留作课后作业）$
+
+设$dp[i,j]$表示以$i$, $j$两个顶点所连的线段为一条边构成的三角形的最大权值，则有：
+\begin{equation*}
+    dp[i,j]=
+    \begin{cases}
+        0&,i=j,\\
+        \min\limits_{i\le k\le j}\{t[i,k]+t[k+1,j]+w(v_{i-1}v_kv_j)\}&,i<j.
+    \end{cases}
+\end{equation*}
+\subsubsection{括号序列}
+令$dp[i,j]$表示区间$[i,j)$范围内最少需要补多少个括号。
+\begin{equation*}
+    dp[i,j]=
+    \begin{cases}
+        0&,i=j,\\
+        1&,i+1=j,\\
+        dp[i+1,j-1]&,of\,(s)\,or\,[s],\\
+        dp[i,k]+dp[k,j]&,i\le k<j.
+    \end{cases}
+\end{equation*}
+\subsubsection{区间染色\romannum{2}}
+与括号序列有些类似，不妨参照括号序列的状态转移。令$dp[i,j]$把区间$[i,j)$全部染色所需要的最小代价，则有：
+\begin{equation*}
+    dp[i,j]=
+    \begin{cases}
+        0&,i=j,\\
+        1&,i+1=j,\\
+        1+dp[i+1,j-1],\\
+        dp[i+1,j],\\
+        dp[i,j-1].
+    \end{cases}
+\end{equation*}
+\subsubsection{传球问题\romannum{2}}
+假设两个人来回传球，类似等比数列求和公式的处理。
+\begin{equation*}
+    等比数列求和公式：1+p+p^2+\cdots+p^n=\frac{p^n-1}{p-1},p\neq 1.
+\end{equation*}
+
+可以把相互传球的人看成一个整体，因为这些人无论相互传球传多少次，球最终总会被传出这些人的手里。考虑矩阵乘法这道题目，合并$n\times m$的代价等于合并$n\times k$的代价加上$k\times m$的代价。
+
+用类似的方法只考虑两个人，假设右边的人拿到了球向左传球的概率为$p_i$，定义另外一个$q_i=1-p_i$表示向右传球的概率。则球从右边传出去的概率$P=q_j+p_jq_ip_j+p_jq_ip_jq_ip_j+\cdots$，容易看出这是一个等比数列，则从左边传出的概率与从右边传出的概率是一个定值，所以这两个人与一个人是没有区别的。
+
+对于两个点而言，我们已经知道球从左边出去和从右边出去的概率是多少，我们可以合并过来第三个人表示在这两个人右边的人所构成的整体，同样的我们也可以合并过来这两个人左边的人，问题就转换成四个人的问题。上述合并过程可以使用递归来实现。
+
+现在我们需要设法求解一下四个人的问题：
+
+（弃疗……）

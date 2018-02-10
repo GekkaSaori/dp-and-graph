@@ -3,14 +3,21 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{minted}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
 \newcommand{\romannum}[1]{\uppercase\expandafter{\romannumeral#1}}
+\DeclareMathOperator{\bor}{or}
+\setminted[C++]{autogobble,breaklines,fontsize=\footnotesize,mathescape}
 \begin{document}
-\title{Note on Dynamic Programming (\romannum{3})\\\large{Day 3 AM---Advanced Models}}\date{}\author{Hatsune Miku}
+\title{Note on Dynamic Programming (\romannum{3})\\\large{Day 3 AM to Day 4 AM---Advanced Models}}\date{}\author{Hatsune Miku}
 \maketitle
-\section{Advanced Models}
-\subsection{“第一”计数模型}
+\tableofcontents
+\newpage
+
+\section{“第一”计数模型}
 假设进行一场OI考试，两个人拿了300分，他们都是第一名，则下一个人就是第三名。同时$a=b>c$与$b=a>c$是同一种方案。
-\subsubsection{赛马名次}
+\subsection{赛马名次}
 两个人比赛的结果有三种：输、赢、平。求N个人比赛的结果。$N\le 1000.$
 
 \begin{equation*}
@@ -24,15 +31,15 @@
     C_n^k=C_{n-1}^k+C_{n-1}^{k-1}.
 \end{equation*}
 时间复杂度$O(n^2)$.
-\subsubsection{排列问题}
+\subsection{排列问题}
 有两种骨牌A和B，有无限个。需要选出n个排成一行，但要求至少有三个A被摆放在一起。$N\le 100.$
 
 考虑枚举连续的三个A第一次出现的位置。设$f[i]$为长度为i的序列有多少个满足要求的摆放方案，则枚举三个A第一次出现的位置，设前面部分长度为$j-1$，则后面部分长度为$n-(j+2)$，前面后面都可以任意放置。后面一段摆放方案数有$2^{n-(j+2)}$种。对于前半部分，我们有$2^{j-1}-f[j-1]$种方案，总的来看，我们有$f[i]=\sum^j(2^{j-1}-f[j-1])(2^{n-(j+2)})$。有一个问题，显然我们有当前面最后一位出现的是A，然后就不符合我们枚举第一个出现的位置。所以我们强制第一位为B，则递推式修正为$f[i]=\sum^j(2^{j-2}-f[j-2])(2^{n-(j+2)})+2^{n-3}$.
-\subsection{树模型}
+\section{树模型}
 树模型的基本定义：无向无环图、有$n-1$条边的图。
 
 基本性质：树上任意两点都是相互联通的，且只有一条唯一的路径。
-\subsubsection{直径}
+\subsection{直径}
 无根树与有根树。显然树上最远的两个节点一点是两个叶子节点。对于一个无根树，可以指定一个节点作为根节点将这棵无根树树变为有根树，即把这棵树“拎”起来的过程。求一张图上的最短路可以在现实物理世界中做，将所有的点按照图上的边权连上一条等长的线，然后将这张图拎起来，则所有垂着的边就是最短路上的边。
 
 可以使用标准的图论算法，使用一次DFS，记录DFS序。
@@ -107,11 +114,11 @@ int main(void) {
 }
 \end{minted}
 
-\subsubsection{重心}
+\subsection{重心}
 N个节点的树，询问树的重心。重心是指删除一个点后使联通块大小的最大值最小，$N\le 100000$。
 
 直接枚举这棵树的重心是什么。假设切掉了一个点，那么联通块分为两类，第一类为以它父亲节点为一个叶子结点的子树，另外一类为以这个节点为根节点的子树的大小。两种类型是互补的，可以知一求一。最后两者之间取一个min即可。
-\subsubsection{奖励}
+\subsection{奖励}
 N个的关系图是棵树，树上的边代表了“上司——下属”关系。
 
 每个人要么受到来自上司奖励的1000元，要么给予自己一个下属奖励1000元。
@@ -136,4 +143,3 @@ N个的关系图是棵树，树上的边代表了“上司——下属”关系�
     \end{cases}
 \end{equation*}
 最后输出答案时，只需要再做一次DFS，记录一下每个点是从哪个点来的，递归处理不同的数组即可。
-\end{document}

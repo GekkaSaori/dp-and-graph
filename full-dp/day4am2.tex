@@ -1,0 +1,84 @@
+\section{Optimization and Others}
+\subsection{矩阵优化}
+\subsubsection{骨牌覆盖}
+有$4\times N$的棋盘，用$1\times 2$的骨牌覆盖，求覆盖的方案数\,$\bmod\,10^9+7$的值，$N\le 10^9$.
+
+用$f[i,s]$表示前$i-1$列已经被完全覆盖，且第$i$列的覆盖情况是$s$，如s=\verb+1001+表示第一格和第四格已被覆盖，中间两格未被覆盖。
+
+枚举在$s$到$s'$的转移（使用DFS），我们可以得到以下递推式：
+\begin{equation*}
+    \begin{aligned}
+        f[i+1,s']=\sum_{j=1}^nf[i,j]\\
+        f[i+1,0]=\sum_{j=1}^nf[i,j]\\
+    \end{aligned}
+\end{equation*}
+由$f[i+1]=Af[i]$我们有：
+\begin{equation*}
+    f[n+1]=A^n-f[i]
+\end{equation*}
+使用矩阵快速幂优化转移。
+
+矩阵优化本质上是为了解决$f[i,j]$转移到$f[i+1,j']$中，如果对于$j$这一维可以看成是上一行的若干个点求和转移到下一个点时，可以使用矩阵优化。
+\subsection{单调队列}
+\subsubsection{篱笆}
+篱笆由N个连续的木板构成，有K个工人染色，每块木板只能被染一次，第$i$个工人染一个木板赚$cost[i]$，要么不染色，要么染一个连续的区间，区间必须包含$pos[i]$，区间的最大长度为$len[i]$，求总共最多赚多少钱。$N\le 20000, K\le 100.$
+
+令$f[j]$表示前$j$块已经染完的最优方案，我们有：
+\begin{equation*}
+    f[i,j]\leftarrow f[i,k]+cost[i].
+\end{equation*}
+扩充一下状态$f[i,j]$表示前$i$个工人已经决定了，前$j$个木板也决定了。在这种情况下最优方案是什么。答案是$f[k,n]$，每次枚举最后一个人怎么染。
+\begin{equation*}
+    \begin{aligned}
+        f[i,j]=\max
+        \begin{cases}
+            f[i,j-1],\\
+            f[i-1,j],\\
+            f[i-1,k]+(j-k)\times cost[i]
+        \end{cases}
+        ,j-len(i)\le k且k<pos(i).
+    \end{aligned}
+\end{equation*}
+考虑排序顺序的问题。这个题是可以按$pos[i]$进行排序的，因为我们可以发现一个区间的左端点在左边，右端点在右边，在此情况下按右端点排序是错误的。应该按照线段的中心点进行排序，时间复杂度为$O(n^2k)$，是不能通过这道题目的。
+
+考虑化简一下递推式：
+\begin{equation*}
+    f[i,j]=\min\limits_k\{f[i-1,k]-k\times cost[i]\}+j\times cost[i].
+\end{equation*}
+我们可以看到$k\times cost[i]$这个无聊的东西，考虑维护一个数列$A_k=f[i-1,k]-k\times cost[i]$，对它求最值，明显地数列$A_k$与$j$无关。这个数列的左端点是固定的，右端点是单调递增的，且数列满足性质$j-cost[i]\le k\le pos[i]$，很明显这是一个单调队列（明显的，$k$满足性质$L[i]\le k\le R[j]$，其中$L[i]$与$R[j]$这个区间范围是单调不下降的，满足单调队列的性质。参考“滑动窗口”这道题目，维护一个队列，如果满足$i<j$且$A_i<A_j$，那么$A_i$就再也不会出现了，可以从队列中删除，就得到了一个单调队列）。
+
+代码实现：
+\begin{minted}{C++}
+int queue[10005], head=0, tail=0;
+void push(int x) {
+    while (head < tail) {
+        if (a[queue[tail - 1]] < a[x]) {
+            --tail;
+        }
+    }
+    queue[tail++] = x;
+}
+
+void pop(int x) {
+    while (head < tail) {
+        if (q[head] < x) {
+            ++head;
+        }
+    }
+}
+
+int last = 0;
+for (int j = 0; j < m; ++j) {
+    for (int k = last; k <= R[j]; ++k) push(k);
+    pop(L[j]);
+
+    printf("%d\n", queue[head]);
+
+    last = R[j];
+}
+\end{minted}
+
+可以解决给定一个数组，有若干个询问，每次询问区间内的最值是什么，区间单调向右的问题。
+
+回来看这道题，只需要用单调队列维护$f[i-1,k]-k\times cost[i]$，就能够在$O(n)$的时间内解决查询$k$大的问题，最终总的时间复杂度为$O(nk)$.
+\end{document}
